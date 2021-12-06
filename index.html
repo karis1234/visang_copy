@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 제이쿼리는 맨 위에 위치하게 합니다. -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <!-- 여기부터는 외부 css, js, 웹폰트, 폰트어썸 자리 입니다. -->
+    <!-- 여기까지는 외부 css, js, 웹폰트, 폰트어썸 자리 입니다. -->
+    <!-- 내가 만든 css, js 들은 맨 아래에 위치하게 합니다. -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    
+    <div class="top-bar-wrap">
+      <div class="top-bar con row">
+        <div class="logo-box cell">
+           <svg id="store-logo" viewBox="0 0 805.4 94">
+          <path d="M724.9 40.6V20.2l-11.6 16.5-19.3-6.3L706.1 47l-11.9 16.5 19.1-6.3 11.6 16.6V53.3l19.5-6.3-19.5-6.4z"></path>
+          <path d="M762.6 0h-36.7l42.8 47-42.8 47h36.7l42.8-47-42.8-47zm-721 27.5c5.8 0 11.5 2.8 15.3 7.5l1.4 1.7 17.9-12.3-1.6-2c-7.9-9.9-20-15.6-33-15.6C18.7 6.8 0 24.7 0 46.6s18.7 39.8 41.6 39.8c12.9 0 24.9-5.6 32.8-15.3l1.6-2-17.9-12.3-1.4 1.7c-3.9 4.7-9.4 7.4-15.2 7.4-10.6 0-19.6-8.8-19.6-19.2.1-10.4 9.1-19.2 19.7-19.2zm192.3 23.9L201.5 9h-20.6v75h20V42l30.2 42h22.8V9h-20v42.4zm77 11c0 .6-.8.7-1.2.7-.3 0-.9-.1-1.2-.8L291.9 9h-23l24.5 75h32.7l24.5-75h-23l-16.7 53.4zm186.2-9c8-4.6 12.6-13 11.9-22.2-.9-12.5-11.8-22.1-24.8-22.1h-38.3v75h20v-27h9c.9 0 1.7.1 2.3.9l12.9 26.1h22.5l-15.5-30.7zM483.6 37H466v-8h17.6c2.4 0 4.4 1.6 4.4 4s-2 4-4.4 4zm124.3 47h60V64h-40v-9h36V37h-36v-8h40V9h-60v75zm-45.2-46.7c-10.7-2.4-13.8-4-13.8-7.5v-.2c0-2.8 2.1-5 7.3-5 6.9 0 12.5 2.2 20 6.7l12-14.2c-8.4-6.7-18.5-10.3-31.6-10.3-18.6 0-29.7 10.4-29.7 24.8v.2c0 15.9 13.1 20.6 29.6 24.3 10.5 2.4 13.4 4.2 13.4 7.4v.2c0 3.3-3.7 5.3-9.5 5.3-9 0-17.8-3.2-25.4-9.3L522.9 74c9.5 8.5 23.3 12.8 37 12.8 18.8 0 32-9.4 32-25.2v-.2c0-14.5-11.4-20.2-29.2-24.1zM124.8 6.9c-22.4 0-40.6 17.9-40.6 39.8 0 22 18.2 39.8 40.6 39.8 22.4 0 40.6-17.9 40.6-39.8 0-22-18.2-39.8-40.6-39.8zm0 58.8c-10.5 0-19-8.5-19-19s8.5-19 19-19 19 8.5 19 19-8.5 19-19 19zM364.9 84h60V64h-40v-9h36V37h-36v-8h40V9h-60v75z"></path>
+      </svg>
+        </div>
+        <div class="menu-box cell">
+          <ul class="row">
+            <li class="cell"><a href="#">신발</a></li>
+            <li class="cell"><a href="#">아동</a></li>
+            <li class="cell"><a href="#">의류</a></li>
+            <li class="cell"><a href="#">런칭캘린더</a></li>
+            <li class="cell"><a href="#">sale</a></li>
+          </ul>
+        </div>
+        <div class="search-box cell-r">
+          <a href="#"><i class="fas fa-search"></i></a>
+        </div>
+        <div class="icon-box cell-r">
+          <ul class="row">
+            <li class="cell"><a href="#">
+              <i class="far fa-question-circle"></i>
+            </a></li>
+            <li class="cell">
+              <a href="#">
+                <i class="far fa-heart"></i>
+              </a>
+            </li>
+            <li class="cell cartoon">
+              <a href="#">
+                <i class="fas fa-shopping-cart"></i>
+              </a>
+            </li>
+            <li class="cell">
+              <a href="#"><i class="far fa-user"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="nav-2-depth-wrap">
+      <div class="nav-2-depth con"> 
+        <div class="nav-left">
+          <div class="content">
+            
+            <ul>
+              <li><a href="#">전체보기</a></li>
+              <li><a href="#">베스트셀러</a></li>
+              <li><a href="#">클래식척</a></li>
+              <li><a href="#">척 70</a></li>
+              <li><a href="#">척 테일러 올스타</a></li>
+              <li><a href="#">스케이트보딩</a></li>
+              <li><a href="#">잭퍼셀</a></li>
+              <li><a href="#">배스킷볼</a></li>
+            </ul>
+            
+            <div class="recom-box">
+              <p>추천상품</p>
+              <ul class="row">
+                <li class="cell">
+                  <a href="#">
+                    <img src="https://www.converse.co.kr/image/banner/16279507350.jpg" alt="">
+                    <span>빅 사이즈</span>
+                  </a>
+                </li>
+                <li class="cell">
+                  <a href="#">
+                    <img src="https://www.converse.co.kr/image/banner/16279507350.jpg" alt="">
+                    <span>빅 사이즈</span>
+                  </a>
+                </li>
+                <li class="cell">
+                  <a href="#">
+                    <img src="https://www.converse.co.kr/image/banner/16279507350.jpg" alt="">
+                    <span>빅 사이즈</span>
+                  </a>
+                </li>
+                <li class="cell">
+                  <a href="#">
+                    <img src="https://www.converse.co.kr/image/banner/16279507350.jpg" alt="">
+                    <span>빅 사이즈</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+          </div>
+          <div class="content">
+            
+            <ul>
+              <li><a href="#">아동</a></li>
+              <li><a href="#">베스트셀러</a></li>
+              <li><a href="#">클래식척</a></li>
+              <li><a href="#">척 70</a></li>
+              <li><a href="#">척 테일러 올스타</a></li>
+              <li><a href="#">스케이트보딩</a></li>
+              <li><a href="#">잭퍼셀</a></li>
+              <li><a href="#">배스킷볼</a></li>
+            </ul>
+            
+            <div class="recom-box">
+              <p>추천상품</p>
+              <ul class="row">
+                <li class="cell">
+                  <a href="#">
+                    <img src="https://www.converse.co.kr/image/banner/16279507350.jpg" alt="">
+                    <span>빅 사이즈</span>
+                  </a>
+                </li>
+                <li class="cell">
+                  <a href="#">
+                    <img src="https://www.converse.co.kr/image/banner/16279507350.jpg" alt="">
+                    <span>빅 사이즈</span>
+                  </a>
+                </li>
+                <li class="cell">
+                  <a href="#">
+                    <img src="https://www.converse.co.kr/image/banner/16279507350.jpg" alt="">
+                    <span>빅 사이즈</span>
+                  </a>
+                </li>
+                <li class="cell">
+                  <a href="#">
+                    <img src="https://www.converse.co.kr/image/banner/16279507350.jpg" alt="">
+                    <span>빅 사이즈</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+          </div>
+          <div class="content">
+            
+            <ul>
+              <li><a href="#">의류</a></li>
+              <li><a href="#">베스트셀러</a></li>
+              <li><a href="#">클래식척</a></li>
+              <li><a href="#">척 70</a></li>
+              <li><a href="#">척 테일러 올스타</a></li>
+              <li><a href="#">스케이트보딩</a></li>
+              <li><a href="#">잭퍼셀</a></li>
+              <li><a href="#">배스킷볼</a></li>
+            </ul>
+            
+            <div class="recom-box">
+              <p>추천상품</p>
+              <ul class="row">
+                <li class="cell">
+                  <a href="#">
+                    <img src="https://www.converse.co.kr/image/banner/16279507350.jpg" alt="">
+                    <span>빅 사이즈</span>
+                  </a>
+                </li>
+                <li class="cell">
+                  <a href="#">
+                    <img src="https://www.converse.co.kr/image/banner/16279507350.jpg" alt="">
+                    <span>빅 사이즈</span>
+                  </a>
+                </li>
+                <li class="cell">
+                  <a href="#">
+                    <img src="https://www.converse.co.kr/image/banner/16279507350.jpg" alt="">
+                    <span>빅 사이즈</span>
+                  </a>
+                </li>
+                <li class="cell">
+                  <a href="#">
+                    <img src="https://www.converse.co.kr/image/banner/16279507350.jpg" alt="">
+                    <span>빅 사이즈</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+          </div>
+          <div class="content">
+            
+            <ul>
+              <li><a href="#">런칭캘린더</a></li>
+              <li><a href="#">베스트셀러</a></li>
+              <li><a href="#">클래식척</a></li>
+              <li><a href="#">척 70</a></li>
+              <li><a href="#">척 테일러 올스타</a></li>
+              <li><a href="#">스케이트보딩</a></li>
+              <li><a href="#">잭퍼셀</a></li>
+              <li><a href="#">배스킷볼</a></li>
+            </ul>
+            
+            <div class="recom-box">
+              <p>추천상품</p>
+              <ul class="row">
+                <li class="cell">
+                  <a href="#">
+                    <img src="https://www.converse.co.kr/image/banner/16279507350.jpg" alt="">
+                    <span>빅 사이즈</span>
+                  </a>
+                </li>
+                <li class="cell">
+                  <a href="#">
+                    <img src="https://www.converse.co.kr/image/banner/16279507350.jpg" alt="">
+                    <span>빅 사이즈</span>
+                  </a>
+                </li>
+                <li class="cell">
+                  <a href="#">
+                    <img src="https://www.converse.co.kr/image/banner/16279507350.jpg" alt="">
+                    <span>빅 사이즈</span>
+                  </a>
+                </li>
+                <li class="cell">
+                  <a href="#">
+                    <img src="https://www.converse.co.kr/image/banner/16279507350.jpg" alt="">
+                    <span>빅 사이즈</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+          </div>
+          <div class="content">
+            
+            <ul>
+              <li><a href="#">sale</a></li>
+              <li><a href="#">베스트셀러</a></li>
+              <li><a href="#">클래식척</a></li>
+              <li><a href="#">척 70</a></li>
+              <li><a href="#">척 테일러 올스타</a></li>
+              <li><a href="#">스케이트보딩</a></li>
+              <li><a href="#">잭퍼셀</a></li>
+              <li><a href="#">배스킷볼</a></li>
+            </ul>
+            
+            <div class="recom-box">
+              <p>추천상품</p>
+              <ul class="row">
+                <li class="cell">
+                  <a href="#">
+                    <img src="https://www.converse.co.kr/image/banner/16279507350.jpg" alt="">
+                    <span>빅 사이즈</span>
+                  </a>
+                </li>
+                <li class="cell">
+                  <a href="#">
+                    <img src="https://www.converse.co.kr/image/banner/16279507350.jpg" alt="">
+                    <span>빅 사이즈</span>
+                  </a>
+                </li>
+                <li class="cell">
+                  <a href="#">
+                    <img src="https://www.converse.co.kr/image/banner/16279507350.jpg" alt="">
+                    <span>빅 사이즈</span>
+                  </a>
+                </li>
+                <li class="cell">
+                  <a href="#">
+                    <img src="https://www.converse.co.kr/image/banner/16279507350.jpg" alt="">
+                    <span>빅 사이즈</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+          </div>   
+        </div>
+        <div class="nav-2-bg"></div>
+      </div>
+    </div>
+    
+    <div class="section section01 con row">
+      <div class="section-left cell">
+        <div class="img-box section-h-125" style="background-image:url(https://cdn.jsdelivr.net/gh/iopgoom/sample/Converse_files/KakaoTalk_20200709_134326255.jpg);"></div>
+        <div class="hover-box">
+          
+          <p>컨버스 레이아웃 만들기</p>
+          
+        </div>
+        <a href="https://www.naver.com/" target="_blank" class="overlay-box"></a>
+      </div>
+      <div class="section-right cell row">    
+        <div class="section-w-50 cell">
+          
+          <div class="img-box section-h-125" style="background-image:url(https://cdn.jsdelivr.net/gh/iopgoom/sample/Converse_files/168696C_168696C_primary.jpg);"></div>
+          <div class="img-box hover-box" style="background-image:url(https://cdn.jsdelivr.net/gh/iopgoom/sample/Converse_files/168696C_168696C_hover.jpg);"></div>
+          <a href="https://www.naver.com/" target="_blank"  class="overlay-box" >
+            <p class="type">NEW ARRIVEAL</p>
+            <div class="info">
+              <p class="name">척테일러</p>
+              <p class="price">120,000원</p>
+            </div>
+          </a>
+          
+        </div>
+        <div class="section-w-50 cell">
+          
+          <div class="img-box section-h-125" style="background-image:url(https://cdn.jsdelivr.net/gh/iopgoom/sample/Converse_files/168976C_168976C_primary.jpg);"></div>  
+          <div class="img-box hover-box" style="background-image:url(https://cdn.jsdelivr.net/gh/iopgoom/sample/Converse_files/168976C_168976C_hover.jpg);"></div>
+          
+          <a href="https://www.naver.com/" target="_blank" class="overlay-box">
+            <p class="type">NEW ARRIVEAL</p>
+            <div class="info">
+              <p class="name">척테일러</p>
+              <p class="price">120,000원</p>
+            </div>
+          </a>
+          
+        </div>
+        <div class="section-w-100 cell">
+          <div class="img-box section-h-625" style="background-image:url(https://cdn.jsdelivr.net/gh/iopgoom/sample/Converse_files/01_1440x900.jpg);">
+          </div>      
+        </div>
+      </div>
+    </div>
+    
+    <div class="section section02 con row">
+      
+      <div class="section-left cell row">
+        
+        <div class="section-w-50 cell">
+          
+          <div class="img-box section-h-125" style="background-image: url(https://cdn.jsdelivr.net/gh/iopgoom/sample/Converse_files/168597C_168597C_hover_1.jpg) ;"></div>
+          <div class="hover-box img-box" style="background-image: url(https://cdn.jsdelivr.net/gh/iopgoom/sample/Converse_files/168597C_168597C_primary_1.jpg) ;"></div>
+          <a href="https://www.naver.com/" target="_blank" class="overlay-box">
+            <p class="type">NEW ARRIVEAL</p>
+            <div class="info">
+              <p class="name">척테일러</p>
+              <p class="price">120,000원</p>
+            </div>
+          </a>
+          
+        </div>
+        <div class="section-w-50 cell">   
+          
+          <div class="img-box section-h-125" style="background-image: url(https://cdn.jsdelivr.net/gh/iopgoom/sample/Converse_files/168597C_168597C_primary_1.jpg) ;"></div>
+          <div class="hover-box img-box" style="background-image: url(https://cdn.jsdelivr.net/gh/iopgoom/sample/Converse_files/168597C_168597C_hover_1.jpg) ;"></div>
+          <a href="https://www.naver.com/" target="_blank" class="overlay-box">
+            <p class="type">NEW ARRIVEAL</p>
+            <div class="info">
+              <p class="name">척테일러</p>
+              <p class="price">120,000원</p>
+            </div>
+          </a>
+          
+        </div>
+        <div class="section-w-50 cell">      
+          
+          <div class="img-box section-h-125" style="background-image: url(https://cdn.jsdelivr.net/gh/iopgoom/sample/Converse_files/168872C_168872C_hover_1.jpg) ;"></div>
+          <div class="hover-box img-box" style="background-image: url(https://cdn.jsdelivr.net/gh/iopgoom/sample/Converse_files/168872C_168872C_primary_1.jpg) ;"></div>
+          <a href="https://www.naver.com/" target="_blank" class="overlay-box">
+            <p class="type">NEW ARRIVEAL</p>
+            <div class="info">
+              <p class="name">척테일러</p>
+              <p class="price">120,000원</p>
+            </div>
+          </a>
+          
+        </div>
+        <div class="section-w-50 cell">      
+          
+          <div class="img-box section-h-125" style="background-image: url(https://cdn.jsdelivr.net/gh/iopgoom/sample/Converse_files/168872C_168872C_primary_1.jpg) ;"></div>
+          <div class="hover-box img-box" style="background-image: url(https://cdn.jsdelivr.net/gh/iopgoom/sample/Converse_files/168872C_168872C_hover_1.jpg) ;"></div>
+          <a href="https://www.naver.com/" target="_blank" class="overlay-box">
+            <p class="type">NEW ARRIVEAL</p>
+            <div class="info">
+              <p class="name">척테일러</p>
+              <p class="price">120,000원</p>
+            </div>
+          </a>
+          
+        </div>
+        
+      </div>
+      <div class="section-right cell">
+        
+        <div class="img-box section-h-125" style="background-image: url(https://cdn.jsdelivr.net/gh/iopgoom/sample/Converse_files/KakaoTalk_20200721_135851809.jpg) ;"></div>
+        <div class="hover-box">
+          <p>모듈화 진행 완료</p>
+        </div>
+        
+      </div>
+      
+    </div>
+
+    
+    
+</body>
+</html>

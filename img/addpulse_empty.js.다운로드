@@ -1,0 +1,81 @@
+(function(window) {
+    if (!window.addpulse) window.addpulse = function(){};
+    var addpulse = function(){};
+    addpulse.menu = addpulse.prototype = {
+        copyright: "addpulse",
+        version:"1.0",
+        currentSlide:null,
+        currentNum:null,
+        nextSlide:null,
+        prevSlide:null,
+        bStopAnimate:false,
+        timeoutID : null,
+        setGnbSlideUpDown:function(oMenuTarget)
+        {
+            var iSpeed = 300;
+
+            oMenuTarget
+                .find('.treemenu').each(function(){
+                $(this).bind('click',function(){
+
+                    if ($(this).data('tree-open') !== true) {
+                        var iHeight = $(this).find('a').height() + $(this).find('ul').height() + 40;
+                        $(this).find('a i').addClass('open');
+                        $(this).delay( 80 ).animate({
+                            height: iHeight
+                        }, 200, function () {
+                            $(this).data('tree-open', true);
+
+                        });
+                    } else {
+                        $(this).find('a i').removeClass('open')
+                        $(this).delay( 80 ).animate({
+                            height: 60
+                        }, 200, function () {
+                            $(this).data('tree-open', false);
+
+                        });
+                    }
+
+                });
+                oMenuTarget.find('.treemenu.active').each(function(){
+                    var iHeight = $(this).find('a').height() + $(this).find('ul').height() + 40;
+                    $(this).find('a i').addClass('open');
+                    $(this).css('height',iHeight);
+                    $(this).data('tree-open', true);
+                })
+            });
+        }
+    }
+    window.addpulse.menu = addpulse.menu;
+})(window);
+
+
+$(document).ready(function(){
+    $('.navbar-toggler').click(function(e){
+        if ($('.main-sidebar').data('toggle') !== true) {
+            $('.content-wrapper').animate({
+                "left": "230px"
+            }, 200, function () {
+            });
+            $('.main-sidebar').stop().animate({
+                left: 0
+            }, 200, function () {
+                $(this).data('toggle', true);
+            });
+
+
+        } else {
+            $('.main-sidebar').stop().animate({
+                left: "-230px"
+            }, 200, function () {
+                $(this).data('toggle', false);
+            });
+            $('.content-wrapper').stop().animate({
+                "left": 0
+            }, 200, function () {
+            });
+        }
+
+    })
+})

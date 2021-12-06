@@ -1,0 +1,309 @@
+/* 노멀라이징 */
+*{
+    margin: 0;
+    padding: 0;
+  }
+  ul , li {
+    list-style: none ;
+  }
+  a{
+    color: inherit ;
+    text-decoration: none ;
+  }
+  /* 라이브러리 */
+  .cell{
+    float: left ;
+  }
+  .cell-r{
+    float: right ;
+  }
+  .row::after{
+    clear: both;
+    content: "";
+    display: block;
+  }
+  .con{
+    max-width: 1440px;
+    margin: 0 auto ;
+  } 
+  /* 스타일 */
+  /* top-bar 시작 */
+  .top-bar-wrap{
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+  }
+  .top-bar-wrap > .top-bar{
+    height: 60px;
+  }
+  .top-bar-wrap > .top-bar > .logo-box{
+    width: 120px;
+    height: 60px;
+    position: relative;
+  }
+  .top-bar-wrap > .top-bar > .logo-box > svg{
+    position: absolute;
+    top : 40%;
+  }
+  .top-bar-wrap > .top-bar > .menu-box{
+    height: 60px
+  }
+  .top-bar-wrap > .top-bar > .menu-box > ul > li{
+    padding-top : 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
+  }
+  .top-bar-wrap > .top-bar > .search-box{
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    color : white;
+    text-align: center;
+    padding-top: 20px;
+    box-sizing: border-box;
+  }
+  .top-bar-wrap > .top-bar > .icon-box{
+    height: 60px;
+  }
+  .top-bar-wrap > .top-bar > .icon-box > ul > li{
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .top-bar-wrap > .top-bar > .icon-box > ul > li.cartoon{
+    position: relative;
+  }
+  .top-bar-wrap > .top-bar > .icon-box > ul > li.cartoon::after{
+    content: "0";
+    display: block;
+    width :20px;
+    height: 20px;
+    background-color: skyblue;
+    border-radius: 50%;
+    text-align: center;
+    color : white;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+  }
+  /* top-bar 끝 */
+  /* nav-2-depth-wrpa 시작 */
+  .nav-2-depth-wrap{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .nav-2-depth-wrap.active{
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-2-depth-wrap > .nav-2-depth{
+    height: 100%
+  }
+  .nav-2-depth-wrap > .nav-2-depth > .nav-left{
+    min-width: 660px;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    z-index: 1000;
+  }
+  .nav-2-depth-wrap > .nav-2-depth > .nav-left > .content{
+    width: 100% ;
+    height: 100%;
+    background-color: white ;
+    padding-left: 30px ;
+    padding-top: 50px ;
+    padding-right: 30px ;
+    box-sizing: border-box ;
+    position: absolute ;
+    left: -150% ;
+    transition: 0.5s ;
+  }
+  .nav-2-depth-wrap > .nav-2-depth > .nav-left > .content.active{
+    left: 0 ;
+  }
+  .nav-2-depth-wrap > .nav-2-depth > .nav-left > .content::after{
+    content: "" ;
+    display: block ;
+    width: 100% ;
+    height: 100% ;
+    background-color: white ;
+    position: absolute ;
+    top: 0 ;
+    left: -100% ;
+  }
+  .nav-2-depth-wrap > .nav-2-depth > .nav-left > .content > ul > li{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .nav-2-depth-wrap > .nav-2-depth > .nav-left > .content > .recom-box{
+    margin-top: 50px;
+  }
+  .nav-2-depth-wrap > .nav-2-depth > .nav-left > .content > .recom-box > ul {
+    margin-top: 20px;
+  }
+  .nav-2-depth-wrap > .nav-2-depth > .nav-left > .content > .recom-box > ul > li{
+    width: 25%;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+  .nav-2-depth-wrap > .nav-2-depth > .nav-left > .content > .recom-box > ul > li > a > img{
+    width: 100%;
+  }
+  .nav-2-depth-wrap > .nav-2-depth > .nav-2-bg{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    opacity:0 ;
+    visibility:hidden;
+    transition: 0.5s;
+    top: 0;
+    left: 0;
+  }
+  .nav-2-depth-wrap > .nav-2-depth > .nav-2-bg.active{
+    opacity:1;
+    visibility: visible;
+  }
+  /* nav-2-depth-wrap 끝 */
+  /* section01 시작 */
+  .section01 > .section-left > .hover-box > p { 
+    position: absolute ;
+    width: 100% ;
+    text-align: center ;
+    bottom: 3vw ;
+    color: white ;
+    font-weight: bold ;  
+    font-size: 3vw ;
+  }
+  @media screen and (max-width: 768px) {
+    .section01 > .section-left > .hover-box > p { 
+      font-size: 6vw ;
+    }
+  }
+  /* section01 끝 */
+  /* 모듈 */
+  .section > .section-left{
+    width: 50% ;
+    position: relative ;
+  }
+  .section > .section-right{
+    width: 50% ;
+    position: relative ;
+  }
+  .section-h-125{
+    padding-bottom: 125% ;  
+  }
+  .section-h-625{
+    padding-bottom: 62.5% ;
+  }
+  .section-w-50{
+    width: 50% ;
+    position: relative ;
+  } 
+  .section-w-100{
+    width: 100% ;
+    position: relative ;
+  } 
+  .img-box{
+    background-position: center ;
+    background-size:cover ;
+    background-repeat: no-repeat ;  
+  }
+  .hover-box{
+    width: 100% ;
+    height: 100% ;
+    position: absolute ;
+    background-color: rgba(0,0,0,0.5) ;
+    top: 0 ;
+    left: 0 ;
+    opacity: 0 ;
+    visibility: hidden ;
+    transition: 0.5s ;
+  }
+  *:hover > .hover-box{
+    opacity: 1 ;
+    visibility: visible ;
+  }
+  .overlay-box{
+    width: 100% ;
+    height: 100% ;
+    position: absolute ;
+    top: 0 ;
+    left: 0 ;
+    font-size: 1.5vw ;
+  }
+  .overlay-box > .type{
+    position: absolute ;
+    top: 1vw ;
+    right: 1vw ;
+  }
+  .overlay-box > .info{
+    position: absolute ;
+    bottom: 1vw ;
+    left: 1vw ;  
+  }
+  /* 미디어쿼리 */
+  @media screen and (max-width: 768px) {
+  
+    .section > .section-left{
+      width: 100% ;
+    }
+    .section > .section-right{
+      width: 100% ;
+    }
+    .overlay-box{
+      font-size: 3vw ;
+    }
+    .overlay-box > .type{
+      top: 3vw ;
+      right: 3vw ;
+    }
+    .overlay-box > .info{
+      bottom: 3vw ;
+      left: 3vw ;  
+    }
+  }
+  
+  
+  /* 스타일 */
+  /* section01 시작 */
+  .section01 > .section-left > .hover-box > p { 
+    position: absolute ;
+    width: 100% ;
+    text-align: center ;
+    bottom: 3vw ;
+    color: white ;
+    font-weight: bold ;  
+    font-size: 3vw ;
+  }
+  @media screen and (max-width: 768px) {
+    .section01 > .section-left > .hover-box > p { 
+      font-size: 6vw ;
+    }
+  }
+  /* section01 끝 */
+  /* section02 시작 */
+  
+  .section02 > .section-right > .hover-box > p { 
+    position: absolute ;
+    width: 100% ;
+    text-align: center ;
+    top: 50% ;
+    transform: translateY(-50%) ;
+    color: white ;
+    font-weight: bold ;  
+    font-size: 3vw ;
+  }
+  @media screen and (max-width: 768px) {
+    .section02 > .section-right > .hover-box > p { 
+      font-size: 6vw ;
+    }
+  }
+  /* section02 끝 */
